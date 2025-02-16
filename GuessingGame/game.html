@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
+</head>
+<body>
+  <script>
+    let max = prompt("Enter the max number");
+    let random = Math.floor(Math.random()*max)+1;
+    let guess = prompt("Enter a random guess");
+    while(true) {
+      if(guess == 'q'){
+        alert(`You quit ! number is : ${random}`);
+        break;
+      }
+      else if(guess==random){
+        alert("Rigth guess");
+        break;
+      }
+      else if(guess<random){
+        guess = prompt("Your guess was too small! Guess Again");
+      }
+      else if(guess>random){
+        guess = prompt("Your guess was too big! Guess Again!");
+      }
+      else{
+        guess = prompt("Wrong guess ! Enter a random guess");
+      }
+    }
+  </script>
+</body>
+</html>
