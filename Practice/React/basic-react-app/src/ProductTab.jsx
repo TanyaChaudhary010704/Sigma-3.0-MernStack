@@ -1,12 +1,22 @@
 import Product from "./Product.jsx";
 function ProductTab() {
-  const features = ["hitech,durable"];
+  let styles = {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "1rem",
+    justifyContent: "center",
+    border: "1px solid black",
+    backgroundColor:"black"
+  }
   return (
     <>
-    <Product title="laptop" features={features} price={30000}/>
-    <Product title="phone" features={features} price={40000}/>
-    <Product title="pen" features={features} price={20000}/>
-    </>
+      <h2>Deals</h2>  
+      <div style={styles}>
+      <Product title="Asus Laptop" idx={0}/>
+      <Product title="Samsung M31 phone" idx={1}/>
+      <Product title="Infinity Gel Pen" idx={2}/>
+      </div>
+    </> 
   )
 }
 export default ProductTab;

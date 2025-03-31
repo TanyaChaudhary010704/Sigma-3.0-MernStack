@@ -14,12 +14,12 @@ function App() {
     // <Product/>
     // <Product/>
     // </>
-    // <>
-    // <ProductTab></ProductTab>
-    // </>
     <>
-    <MsgBox/>
+    <ProductTab/>
     </>
+    // <>
+    // <MsgBox/>
+    // </>
   )
 }
 
