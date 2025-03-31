@@ -1,6 +1,7 @@
 import './App.css'
 import Title from "./Title.jsx"
 import ProductTab from './ProductTab.jsx';
+import Button from './Button.jsx';
 import MsgBox from './MsgBox.jsx';
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
     // <Product/>
     // </>
     <>
-    <ProductTab/>
+      <ProductTab />
+      <Button/>
     </>
     // <>
     // <MsgBox/>
