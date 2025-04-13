@@ -1,43 +1,20 @@
-import React from 'react'
 import { useState } from 'react'
-const LotteryGame = () => {
-  let [ticket, setTicket] = useState("");
-  let [win, setWin] = useState(false);
+import Ticket from './Ticket';
+import {genTicket} from "./helper"
+const LotteryGame = ({n,winCondition}) => {
+  let [ticket, setTicket] = useState(genTicket(n));
+  //let isWinning = sum(ticket) === winningScore;
+  let isWinning = winCondition(ticket);
 
-  let checkWinning = (num) => {
-    let sum = 0;
-    while (num != 0) {
-      sum += (num%10)
-      num = Math.floor(num/10)
-    }
-    if (sum == 15) {
-      setWin(true)
-    }
-    else {
-      setWin(false)
-    }
-  }
-
-  let getTicket = () => {
-    let num = Math.floor(Math.random() * 1000) + 1;
-    //let num = 555;
-    if (num < 10) {
-      setTicket("00"+num.toString());
-    }
-    else if (num < 100) {
-      setTicket("0"+num.toString());
-    }
-    else {
-      setTicket(num.toString());
-    }
-    checkWinning(num)
+  let buyTicket = () => {
+    setTicket(genTicket(n));
   }
 
   return (
     <div>
-      <h2>Lottery {win?"Congratulations , you won! ":""}</h2>
-      <h3>Lottery Ticket = {ticket}</h3>
-      <button onClick={getTicket}>Get New Ticket</button>
+      <Ticket ticket={ticket}/>
+      <button onClick={buyTicket}>Get New Ticket</button>
+      <h2>{isWinning && "Congratulations , you won! "}</h2>
     </div>
   )
 }
