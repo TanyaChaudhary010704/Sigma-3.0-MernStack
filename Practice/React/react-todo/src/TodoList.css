@@ -1,0 +1,39 @@
+.TodoList{
+  border: 5px solid #6b55b1;
+  border-radius: 20px;
+  padding: 4rem;
+  box-shadow: 1px 1px 1px #6b55b1;
+  color: #c6bfdd;
+}
+.TodoList hr{
+  width: 100%;
+  margin: 2rem 0;
+  background-color: #6b55b1;
+  color: #6b55b1;
+}
+.TodoList input{
+  margin-right: -.5rem;
+  padding: 1rem;
+  background: transparent;
+  border:2px solid #6b55b1;
+  color: #6b55b1;
+}
+.TodoList>button{
+  padding: 1rem;
+  background-color: #6b55b1;
+}
+.TodoList ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.TodoList ul li button{
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: large;
+}
+.TodoList ul li .del{
+  padding:  1rem 1.5rem;
+  background-color: #6b55b1;
+}
