@@ -1,0 +1,14 @@
+.ticket {
+  border: 1px solid #945151;
+  border-radius: 20px;
+  width: 500px;
+  padding: 1rem;
+}
+.ticket span{
+  font-size: 50px;
+  color: #945151;
+}
+.ticket button{
+  margin-top:1rem ;
+}
+
